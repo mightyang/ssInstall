@@ -59,7 +59,7 @@ rm -f ./latest.zip
 echo make path /www
 mkdir -p /www
 echo move wordpress to www
-mv -rf ./wordpress /www/
+mv -f ./wordpress /www/
 echo change mod for www
 chmod -R 777 /www
 echo install wordpress finished
