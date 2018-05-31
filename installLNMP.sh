@@ -32,10 +32,11 @@ echo ===================================
 
 echo ===================================
 echo install mariadb
-yum -y install mariadb mariadb-server
+yum -y install mariadb-server
+yum -y install mariadb
 echo enable and start mariadb
-systemctl enable mariadb
-systemctl start mariabd
+systemctl start mariabd.service
+systemctl enable mariadb.service
 echo set mariadb password
 mysqladmin -u root password 'mightyang1985'
 echo create wordpress database
