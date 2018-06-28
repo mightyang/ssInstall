@@ -5,16 +5,17 @@ yum -y install python-pip
 pip install --upgrade pip
 yum clean all
 pip install shadowsocks
+pip install sscrypto
 echo {>/etc/shadowsocks.json
 echo \"server\": \"0.0.0.0\",>>/etc/shadowsocks.json
 echo \"port_password\": {>>/etc/shadowsocks.json
-echo \"11951\": \"mightyang1985\",>>/etc/shadowsocks.json
-echo \"11952\": \"mightyang1985\">>/etc/shadowsocks.json
+echo \"11951\": \"\",>>/etc/shadowsocks.json
+echo \"11952\": \"\">>/etc/shadowsocks.json
 echo },>>/etc/shadowsocks.json
 echo \"local_address\": \"127.0.0.1\",>>/etc/shadowsocks.json
 echo \"local_port\": 1080,>>/etc/shadowsocks.json
 echo \"timeout\": 300,>>/etc/shadowsocks.json
-echo \"method\": \"aes-256-cfb\">>/etc/shadowsocks.json
+echo \"method\": \"chacha20\">>/etc/shadowsocks.json
 echo }>>/etc/shadowsocks.json
 
 echo write shadowsocks.service
